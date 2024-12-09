@@ -1,0 +1,554 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		F8C48E982D06D149007CAB14 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F8C48E7E2D06D147007CAB14 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F8C48E852D06D147007CAB14;
+			remoteInfo = "ScreenSaver Lab";
+		};
+		F8C48EA22D06D149007CAB14 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F8C48E7E2D06D147007CAB14 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F8C48E852D06D147007CAB14;
+			remoteInfo = "ScreenSaver Lab";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F8C48E862D06D147007CAB14 /* ScreenSaver Lab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ScreenSaver Lab.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8C48E972D06D149007CAB14 /* ScreenSaver LabTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ScreenSaver LabTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8C48EA12D06D149007CAB14 /* ScreenSaver LabUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ScreenSaver LabUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		F8C48E882D06D147007CAB14 /* ScreenSaver Lab */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "ScreenSaver Lab";
+			sourceTree = "<group>";
+		};
+		F8C48E9A2D06D149007CAB14 /* ScreenSaver LabTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "ScreenSaver LabTests";
+			sourceTree = "<group>";
+		};
+		F8C48EA42D06D149007CAB14 /* ScreenSaver LabUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "ScreenSaver LabUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F8C48E832D06D147007CAB14 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8C48E942D06D149007CAB14 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8C48E9E2D06D149007CAB14 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F8C48E7D2D06D147007CAB14 = {
+			isa = PBXGroup;
+			children = (
+				F8C48E882D06D147007CAB14 /* ScreenSaver Lab */,
+				F8C48E9A2D06D149007CAB14 /* ScreenSaver LabTests */,
+				F8C48EA42D06D149007CAB14 /* ScreenSaver LabUITests */,
+				F8C48E872D06D147007CAB14 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F8C48E872D06D147007CAB14 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F8C48E862D06D147007CAB14 /* ScreenSaver Lab.app */,
+				F8C48E972D06D149007CAB14 /* ScreenSaver LabTests.xctest */,
+				F8C48EA12D06D149007CAB14 /* ScreenSaver LabUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F8C48E852D06D147007CAB14 /* ScreenSaver Lab */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F8C48EAB2D06D149007CAB14 /* Build configuration list for PBXNativeTarget "ScreenSaver Lab" */;
+			buildPhases = (
+				F8C48E822D06D147007CAB14 /* Sources */,
+				F8C48E832D06D147007CAB14 /* Frameworks */,
+				F8C48E842D06D147007CAB14 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				F8C48E882D06D147007CAB14 /* ScreenSaver Lab */,
+			);
+			name = "ScreenSaver Lab";
+			packageProductDependencies = (
+			);
+			productName = "ScreenSaver Lab";
+			productReference = F8C48E862D06D147007CAB14 /* ScreenSaver Lab.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F8C48E962D06D149007CAB14 /* ScreenSaver LabTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F8C48EAE2D06D149007CAB14 /* Build configuration list for PBXNativeTarget "ScreenSaver LabTests" */;
+			buildPhases = (
+				F8C48E932D06D149007CAB14 /* Sources */,
+				F8C48E942D06D149007CAB14 /* Frameworks */,
+				F8C48E952D06D149007CAB14 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F8C48E992D06D149007CAB14 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				F8C48E9A2D06D149007CAB14 /* ScreenSaver LabTests */,
+			);
+			name = "ScreenSaver LabTests";
+			packageProductDependencies = (
+			);
+			productName = "ScreenSaver LabTests";
+			productReference = F8C48E972D06D149007CAB14 /* ScreenSaver LabTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F8C48EA02D06D149007CAB14 /* ScreenSaver LabUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F8C48EB12D06D149007CAB14 /* Build configuration list for PBXNativeTarget "ScreenSaver LabUITests" */;
+			buildPhases = (
+				F8C48E9D2D06D149007CAB14 /* Sources */,
+				F8C48E9E2D06D149007CAB14 /* Frameworks */,
+				F8C48E9F2D06D149007CAB14 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F8C48EA32D06D149007CAB14 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				F8C48EA42D06D149007CAB14 /* ScreenSaver LabUITests */,
+			);
+			name = "ScreenSaver LabUITests";
+			packageProductDependencies = (
+			);
+			productName = "ScreenSaver LabUITests";
+			productReference = F8C48EA12D06D149007CAB14 /* ScreenSaver LabUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F8C48E7E2D06D147007CAB14 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1610;
+				LastUpgradeCheck = 1610;
+				TargetAttributes = {
+					F8C48E852D06D147007CAB14 = {
+						CreatedOnToolsVersion = 16.1;
+					};
+					F8C48E962D06D149007CAB14 = {
+						CreatedOnToolsVersion = 16.1;
+						TestTargetID = F8C48E852D06D147007CAB14;
+					};
+					F8C48EA02D06D149007CAB14 = {
+						CreatedOnToolsVersion = 16.1;
+						TestTargetID = F8C48E852D06D147007CAB14;
+					};
+				};
+			};
+			buildConfigurationList = F8C48E812D06D147007CAB14 /* Build configuration list for PBXProject "ScreenSaver Lab" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F8C48E7D2D06D147007CAB14;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = F8C48E872D06D147007CAB14 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F8C48E852D06D147007CAB14 /* ScreenSaver Lab */,
+				F8C48E962D06D149007CAB14 /* ScreenSaver LabTests */,
+				F8C48EA02D06D149007CAB14 /* ScreenSaver LabUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F8C48E842D06D147007CAB14 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8C48E952D06D149007CAB14 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8C48E9F2D06D149007CAB14 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F8C48E822D06D147007CAB14 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8C48E932D06D149007CAB14 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8C48E9D2D06D149007CAB14 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F8C48E992D06D149007CAB14 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F8C48E852D06D147007CAB14 /* ScreenSaver Lab */;
+			targetProxy = F8C48E982D06D149007CAB14 /* PBXContainerItemProxy */;
+		};
+		F8C48EA32D06D149007CAB14 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F8C48E852D06D147007CAB14 /* ScreenSaver Lab */;
+			targetProxy = F8C48EA22D06D149007CAB14 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		F8C48EA92D06D149007CAB14 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F8C48EAA2D06D149007CAB14 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		F8C48EAC2D06D149007CAB14 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "ScreenSaver Lab/ScreenSaver_Lab.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ScreenSaver Lab/Preview Content\"";
+				DEVELOPMENT_TEAM = TH9FL7J7ZY;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "congth504.ScreenSaver-Lab";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		F8C48EAD2D06D149007CAB14 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "ScreenSaver Lab/ScreenSaver_Lab.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ScreenSaver Lab/Preview Content\"";
+				DEVELOPMENT_TEAM = TH9FL7J7ZY;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "congth504.ScreenSaver-Lab";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		F8C48EAF2D06D149007CAB14 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TH9FL7J7ZY;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "congth504.ScreenSaver-LabTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ScreenSaver Lab.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ScreenSaver Lab";
+			};
+			name = Debug;
+		};
+		F8C48EB02D06D149007CAB14 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TH9FL7J7ZY;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "congth504.ScreenSaver-LabTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ScreenSaver Lab.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ScreenSaver Lab";
+			};
+			name = Release;
+		};
+		F8C48EB22D06D149007CAB14 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TH9FL7J7ZY;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "congth504.ScreenSaver-LabUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "ScreenSaver Lab";
+			};
+			name = Debug;
+		};
+		F8C48EB32D06D149007CAB14 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TH9FL7J7ZY;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "congth504.ScreenSaver-LabUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "ScreenSaver Lab";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F8C48E812D06D147007CAB14 /* Build configuration list for PBXProject "ScreenSaver Lab" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8C48EA92D06D149007CAB14 /* Debug */,
+				F8C48EAA2D06D149007CAB14 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F8C48EAB2D06D149007CAB14 /* Build configuration list for PBXNativeTarget "ScreenSaver Lab" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8C48EAC2D06D149007CAB14 /* Debug */,
+				F8C48EAD2D06D149007CAB14 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F8C48EAE2D06D149007CAB14 /* Build configuration list for PBXNativeTarget "ScreenSaver LabTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8C48EAF2D06D149007CAB14 /* Debug */,
+				F8C48EB02D06D149007CAB14 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F8C48EB12D06D149007CAB14 /* Build configuration list for PBXNativeTarget "ScreenSaver LabUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8C48EB22D06D149007CAB14 /* Debug */,
+				F8C48EB32D06D149007CAB14 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F8C48E7E2D06D147007CAB14 /* Project object */;
+}
