@@ -45,6 +45,7 @@ class VideoPlayerManager {
     player?.play()
 
     window?.contentView = playerView
+    window?.isReleasedWhenClosed = false
     window?.makeKeyAndOrderFront(nil)
 
     // Fade in
@@ -55,19 +56,29 @@ class VideoPlayerManager {
       }, completionHandler: nil)
   }
 
-  @objc func closeFullscreen() {
+  func closeFullscreen() {
+    guard window != nil else { return }
+
     NSAnimationContext.runAnimationGroup(
       { context in
         context.duration = 1.0
         window?.animator().alphaValue = 0.0
       },
       completionHandler: { [weak self] in
-        self?.player?.pause()
-        self?.playerLooper?.disableLooping()
-        self?.playerLooper = nil
-        self?.player = nil
-        self?.window?.close()
-        self?.window = nil
+        guard let self = self else { return }
+
+        // Stop playback first
+        self.player?.pause()
+        self.playerLooper?.disableLooping()
+
+        // Clean up player resources
+        self.playerLooper = nil
+        self.player = nil
+
+        // Finally close and clean up window
+        self.window?.delegate = nil
+        self.window?.close()
+        self.window = nil
       })
   }
 }

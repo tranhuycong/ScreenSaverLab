@@ -15,6 +15,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 	var statusItem: NSStatusItem?
 	private var eventMonitor: Any?
 	private var isScreensaverActive = false
+	private var autoHideTimer: Timer?
 
 	func applicationDidFinishLaunching(_ aNotification: Notification) {
 		// Create a menu bar icon
@@ -61,9 +62,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 	func handleUserActivity() {
 		if isScreensaverActive {
 			hideFullscreenVideo()
-
-			// Restart idle monitoring
-			checkIdleAndShowVideo()
 		}
 	}
 
@@ -92,23 +90,35 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 		isScreensaverActive = true
 		startEventMonitoring()
 
-		// Call hideFullscreenVideo before display sleep
-		// let displaySleepTime = getDisplaySleepTime()
-		// Timer.scheduledTimer(withTimeInterval: TimeInterval(displaySleepTime - 15), repeats: false) {
-		// 	[weak self] _ in
-		// 	if self?.isScreensaverActive == true {
-		// 		print("Hide video before display sleep")
+		autoHideFullscreenVideoTimer()
+	}
 
-		// 		self?.hideFullscreenVideo()
-		// 	}
-		// }
+	func autoHideFullscreenVideoTimer() {
+		// Call hideFullscreenVideo before display sleep
+		let displaySleepTime = getDisplaySleepTime()
+		autoHideTimer = Timer.scheduledTimer(
+			withTimeInterval: TimeInterval(displaySleepTime - 15), repeats: false
+		) {
+			[weak self] _ in
+			if self?.isScreensaverActive == true {
+				print("Hide video before display sleep")
+
+				self?.hideFullscreenVideo()
+			}
+		}
 	}
 
 	func hideFullscreenVideo() {
-		print("Hide fullscreen video")
 		VideoPlayerManager.shared.closeFullscreen()
 		isScreensaverActive = false
 		cleanUpMonitoring()
+
+		// Invalidate the auto-hide timer
+		autoHideTimer?.invalidate()
+		autoHideTimer = nil
+
+		// Restart idle monitoring
+		checkIdleAndShowVideo()
 	}
 
 	func getIdleTime() -> TimeInterval {
@@ -161,12 +171,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 	}
 
 	func checkIdleAndShowVideo() {
-		Timer.scheduledTimer(withTimeInterval: 5.0, repeats: true) { [weak self] timer in
+		Timer.scheduledTimer(withTimeInterval: 30.0, repeats: true) { [weak self] timer in
 			guard let self = self else { return }
 			let idle = self.getIdleTime()
 			print("Idle time show: \(idle)")
 
-			if idle >= 5.0 {
+			if idle >= 60.0 {
 				timer.invalidate()
 				DispatchQueue.main.async {
 					self.showFullscreenVideo()
