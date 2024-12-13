@@ -35,9 +35,22 @@
 		F8C48EA12D06D149007CAB14 /* ScreenSaver LabUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ScreenSaver LabUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		F8702B7D2D0C133300FE742F /* Exceptions for "ScreenSaver Lab" folder in "ScreenSaver Lab" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Views/Untitled.swift,
+			);
+			target = F8C48E852D06D147007CAB14 /* ScreenSaver Lab */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		F8C48E882D06D147007CAB14 /* ScreenSaver Lab */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				F8702B7D2D0C133300FE742F /* Exceptions for "ScreenSaver Lab" folder in "ScreenSaver Lab" target */,
+			);
 			path = "ScreenSaver Lab";
 			sourceTree = "<group>";
 		};
@@ -424,7 +437,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 12.4;
+				MACOSX_DEPLOYMENT_TARGET = 13.5;
 				MARKETING_VERSION = 1.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.congtranit.screensaverlab;
@@ -456,7 +469,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 12.4;
+				MACOSX_DEPLOYMENT_TARGET = 13.5;
 				MARKETING_VERSION = 1.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.congtranit.screensaverlab;

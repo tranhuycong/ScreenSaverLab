@@ -29,7 +29,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 		statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
 		if let button = statusItem?.button {
 			button.image = NSImage(
-				systemSymbolName: "play.rectangle.fill", accessibilityDescription: "Play Video")
+				systemSymbolName: "photo.tv", accessibilityDescription: "Play Video")
 			button.action = #selector(menuBarIconClicked)
 			checkIdleAndShowVideo()
 		}

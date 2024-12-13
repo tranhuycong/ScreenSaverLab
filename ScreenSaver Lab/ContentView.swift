@@ -8,25 +8,31 @@
 import SwiftUI
 
 struct ContentView: View {
+  @State private var selectedItem: String? = nil
 
   var body: some View {
-    VStack {
-      Image(systemName: "globe")
-        .imageScale(.large)
-        .foregroundStyle(.tint)
-      Text("Hello, world!")
-      Button("Active") {
-        guard let videoURL = Bundle.main.url(forResource: "video", withExtension: "mp4") else {
-          print("Video file not found!")
-          return
+    NavigationSplitView {
+      // Sidebar
+      List(selection: $selectedItem) {
+        Section("Menu") {
+          NavigationLink("Home", value: "home")
+          NavigationLink("Settings", value: "settings")
+          NavigationLink("About", value: "about")
         }
-
-        // Show the fullscreen video
-        VideoPlayerManager.shared.showFullscreenVideo(videoURL: videoURL)
-
+      }
+      .navigationTitle("Sidebar")
+    } detail: {
+      switch selectedItem {
+      case "home":
+        HomeView()
+      case "settings":
+        SettingsView()
+      case "about":
+        AboutView()
+      default:
+        HomeView()
       }
     }
-    .padding()
   }
 }
 
