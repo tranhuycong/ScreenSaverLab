@@ -17,7 +17,12 @@ class VideoPlayerManager {
 
   private init() {}
 
-  func showFullscreenVideo(videoURL: URL) {
+  func showFullscreenVideo(video: String) {
+    // Get video URL from video string
+    guard let videoURL = Bundle.main.url(forResource: video, withExtension: "mp4") else {
+      print("Video file not found!")
+      return
+    }
     // Create a fullscreen window
     let screenFrame = NSScreen.main?.frame ?? .zero
     window = NSWindow(

@@ -13,11 +13,12 @@ import Foundation
 import IOKit.ps
 import SwiftUI
 
-class AppDelegate: NSObject, NSApplicationDelegate {
+class AppDelegate: NSObject, NSApplicationDelegate, ObservableObject {
 	var statusItem: NSStatusItem?
 	private var eventMonitor: Any?
 	private var isScreensaverActive = false
 	private var autoHideTimer: Timer?
+	private var idleTimer: Timer?
 
 	func applicationDidFinishLaunching(_ aNotification: Notification) {
 		// Add firebase configuration
@@ -36,7 +37,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 	}
 
 	@objc func menuBarIconClicked() {
-		showFullscreenVideo()
+		showFullscreenVideo(video: AppSettings.shared.selectedVideo)
+	}
+
+	deinit {
+		NotificationCenter.default.removeObserver(
+			self, name: Notification.Name("StartScreenSaverNotification"), object: nil)
 	}
 
 	func startEventMonitoring() {
@@ -84,15 +90,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 		}
 	}
 
-	func showFullscreenVideo() {
-		// Get video URL from the app bundle
-		guard let videoURL = Bundle.main.url(forResource: "video", withExtension: "mp4") else {
-			print("Video file not found!")
-			return
-		}
-
+	@objc func showFullscreenVideo(video: String) {
 		// Show the fullscreen video
-		VideoPlayerManager.shared.showFullscreenVideo(videoURL: videoURL)
+		VideoPlayerManager.shared.showFullscreenVideo(video: video)
 
 		isScreensaverActive = true
 		startEventMonitoring()
@@ -178,18 +178,29 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 	}
 
 	func checkIdleAndShowVideo() {
-		Timer.scheduledTimer(withTimeInterval: 30.0, repeats: true) { [weak self] timer in
+		if idleTimer != nil {
+			idleTimer?.invalidate()
+			idleTimer = nil
+		}
+		idleTimer = Timer.scheduledTimer(withTimeInterval: 30.0, repeats: true) { [weak self] timer in
 			guard let self = self else { return }
 			let idle = self.getIdleTime()
 			print("Idle time show: \(idle)")
 
-			if idle >= 60.0 {
+			if idle >= AppSettings.shared.inactiveTimeout * 60 {
 				timer.invalidate()
 				DispatchQueue.main.async {
-					self.showFullscreenVideo()
+					self.showFullscreenVideo(video: AppSettings.shared.selectedVideo)
 				}
 			}
 		}
+	}
+
+	func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
+		// Keep app running in background
+		// Hide the Dock icon
+		NSApp.setActivationPolicy(.accessory)
+		return false
 	}
 
 }

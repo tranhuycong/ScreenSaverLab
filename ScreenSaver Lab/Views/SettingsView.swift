@@ -7,6 +7,8 @@
 import SwiftUI
 
 struct SettingsView: View {
+  @EnvironmentObject private var appDelegate: AppDelegate
+
   @StateObject private var settings = AppSettings.shared
 
   var body: some View {
@@ -22,6 +24,9 @@ struct SettingsView: View {
               in: 1...60,
               step: 1
             )
+            .onChange(of: settings.inactiveTimeout) { _ in
+              appDelegate.checkIdleAndShowVideo()
+            }
             Text("\(Int(settings.inactiveTimeout))")
           }
         }
