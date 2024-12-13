@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyB5Rb9UO1vi9WqXHaSPVkvIVtGdXNbIWuM</string>
+	<key>GCM_SENDER_ID</key>
+	<string>927457411319</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.congtranit.screensaverlab</string>
+	<key>PROJECT_ID</key>
+	<string>screensaver-lab</string>
+	<key>STORAGE_BUCKET</key>
+	<string>screensaver-lab.firebasestorage.app</string>
+	<key>IS_ADS_ENABLED</key>
+	<false/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<true/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:927457411319:ios:03704e700a70f5be4f93f2</string>
+</dict>
+</plist>

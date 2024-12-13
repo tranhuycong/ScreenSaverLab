@@ -7,6 +7,8 @@
 
 import AVKit
 import AppKit
+import FirebaseAnalytics
+import FirebaseCore
 import Foundation
 import IOKit.ps
 import SwiftUI
@@ -18,6 +20,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 	private var autoHideTimer: Timer?
 
 	func applicationDidFinishLaunching(_ aNotification: Notification) {
+		// Add firebase configuration
+		FirebaseApp.configure()
+		// Enable analytics data collection explicitly if needed
+		Analytics.setAnalyticsCollectionEnabled(true)
+
 		// Create a menu bar icon
 		statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
 		if let button = statusItem?.button {
