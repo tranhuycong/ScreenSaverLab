@@ -14,7 +14,7 @@ A customizable screensaver application for macOS that displays screensaver when 
 
 ## Download
 
-[Download ScreenSaver Lab v1.0.2](https://github.com/tranhuycong/ScreenSaverLab/releases/download/v1.0.2/ScreenSaverLab-v1.0.2.dmg)
+[Download ScreenSaver Lab](https://github.com/tranhuycong/ScreenSaverLab/releases/download/v1.0.4/ScreenSaverLab-v1.0.4.dmg)
 
 ## All Releases
 
