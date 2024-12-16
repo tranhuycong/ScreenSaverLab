@@ -45,6 +45,8 @@ class VideoPlayerManager {
     playerView.player = player
     playerView.showsFullScreenToggleButton = false
     playerView.controlsStyle = .none
+    // Set video gravity to fill
+    playerView.videoGravity = .resizeAspectFill
 
     player?.volume = 0.0
     player?.play()

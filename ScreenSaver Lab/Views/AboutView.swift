@@ -13,6 +13,9 @@ struct AboutView: View {
         .font(.largeTitle)
       Text("ScreenSaver Lab")
         .font(.title)
+      Link(
+        "GitHub Repository",
+        destination: URL(string: "https://github.com/tranhuycong/ScreenSaverLab")!)
       if let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String {
         Text("Version \(version)")
       }

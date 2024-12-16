@@ -1,6 +1,24 @@
 # ScreenSaver Lab
 
+![macOS Screenshot](docs/mac256.png)
+
 A customizable screensaver application for macOS that displays screensaver when your computer is inactive.
+
+## Preview
+
+![Preview Screenshot](docs/screenshot.png)
+
+## Screen Recording
+
+![Screen Recording](docs/screen-recording-1.gif)
+
+## Download
+
+[Download ScreenSaver Lab v1.0.2](https://github.com/tranhuycong/ScreenSaverLab/releases/download/v1.0.2/ScreenSaverLab-v1.0.2.dmg)
+
+## All Releases
+
+[View all releases](https://github.com/tranhuycong/ScreenSaverLab/releases)
 
 ## Features
 

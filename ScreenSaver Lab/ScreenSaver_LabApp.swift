@@ -32,12 +32,28 @@ class AppDelegate: NSObject, NSApplicationDelegate, ObservableObject {
 			button.image = NSImage(
 				systemSymbolName: "photo.tv", accessibilityDescription: "Play Video")
 			button.action = #selector(menuBarIconClicked)
+			button.sendAction(on: [.leftMouseUp, .rightMouseUp])
+
 			checkIdleAndShowVideo()
 		}
 	}
 
-	@objc func menuBarIconClicked() {
-		showFullscreenVideo(video: AppSettings.shared.selectedVideo)
+	@objc func menuBarIconClicked(sender: NSStatusBarButton) {
+		if NSApp.currentEvent?.type == .rightMouseUp {
+			// Create and show context menu only on right-click
+			let menu = NSMenu()
+			menu.addItem(NSMenuItem(title: "Quit", action: #selector(quitApp), keyEquivalent: "q"))
+			statusItem?.menu = menu
+			statusItem?.menu?.popUp(positioning: nil, at: NSPoint(x: 0, y: 32), in: sender)
+			// Reset menu after showing
+			statusItem?.menu = nil
+		} else {
+			showFullscreenVideo(video: AppSettings.shared.selectedVideo)
+		}
+	}
+
+	@objc func quitApp() {
+		NSApplication.shared.terminate(self)
 	}
 
 	deinit {
@@ -182,6 +198,11 @@ class AppDelegate: NSObject, NSApplicationDelegate, ObservableObject {
 			idleTimer?.invalidate()
 			idleTimer = nil
 		}
+
+		if !AppSettings.shared.isScreenSaverEnabled {
+			return
+		}
+
 		idleTimer = Timer.scheduledTimer(withTimeInterval: 30.0, repeats: true) { [weak self] timer in
 			guard let self = self else { return }
 			let idle = self.getIdleTime()

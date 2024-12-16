@@ -15,6 +15,9 @@ struct SettingsView: View {
     Form {
       Section(header: Text("Screen Saver Settings").font(.title).padding()) {
         Toggle("Enable Screen Saver", isOn: $settings.isScreenSaverEnabled)
+          .onChange(of: settings.isScreenSaverEnabled) { _ in
+            appDelegate.checkIdleAndShowVideo()
+          }
 
         if settings.isScreenSaverEnabled {
           HStack {
