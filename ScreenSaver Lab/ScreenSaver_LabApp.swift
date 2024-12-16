@@ -208,10 +208,14 @@ class AppDelegate: NSObject, NSApplicationDelegate, ObservableObject {
 			let idle = self.getIdleTime()
 			print("Idle time show: \(idle)")
 
-			if idle >= AppSettings.shared.inactiveTimeout * 60 {
-				timer.invalidate()
-				DispatchQueue.main.async {
-					self.showFullscreenVideo(video: AppSettings.shared.selectedVideo)
+			MediaMonitor.shared.isMediaPlaying { isPlaying in
+				print("Is media playing: \(isPlaying)")
+
+				if idle >= AppSettings.shared.inactiveTimeout * 60 && !isPlaying {
+					timer.invalidate()
+					DispatchQueue.main.async {
+						self.showFullscreenVideo(video: AppSettings.shared.selectedVideo)
+					}
 				}
 			}
 		}
